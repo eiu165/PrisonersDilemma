@@ -3,6 +3,8 @@ using JesusNS;
 using LuciferNS;
 using System.Collections.Generic;
 using TickForTackNS;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Arena
 {
@@ -51,8 +53,10 @@ namespace Arena
                     result.Players[0].PlayerScore = CooperateWhenOpponetDeflects;
                     result.Players[1].PlayerScore = DeflectWhenOpponetCooperates;
                 }
-
+                previousRoundResults.Add(result);
             }
+            var player1Score = previousRoundResults.ForEach(x => x.Players.);
+            return previousRoundResults;
 
         }
 
