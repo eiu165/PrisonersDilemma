@@ -17,13 +17,13 @@ namespace TicForTacNS
             }
             else 
             { 
-                var otherPlayer = (playerNumber == PlayerNumber.Player1) ? PlayerNumber.Player2 : PlayerNumber.Player1; 
                 var previousRound = previousRoundResults[previousRoundResults.Count - 1];
-                if(previousRound.Players.Single(x=> x.PlayerNumber == otherPlayer).PlayType == Domain.Action.Attack)
-                {
+                var otherPlayerPreviousRound = (playerNumber == PlayerNumber.Player1) ? previousRound.Player2 : previousRound.Player1;
+                if (otherPlayerPreviousRound.PlayType == Domain.Action.Attack)
+                { 
                     return Domain.Action.Attack;
                 }
-                return Domain.Action.Cooperate;
+                return Domain.Action.Cooperate; 
             }
         }
     }

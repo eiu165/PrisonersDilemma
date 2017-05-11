@@ -22,10 +22,10 @@ namespace MassiveRetaliationNs
                 if (HasOppententAttacked)
                 {
                     return Domain.Action.Attack;
-                }
-                var otherPlayer = (playerNumber == PlayerNumber.Player1) ? PlayerNumber.Player2 : PlayerNumber.Player1;
+                } 
                 var previousRound = previousRoundResults[previousRoundResults.Count - 1];
-                if (previousRound.Players.Single((object x) => x.PlayerNumber == otherPlayer).PlayType == Domain.Action.Attack)
+                var otherPlayerPreviousRound = (playerNumber == PlayerNumber.Player1) ? previousRound.Player2 : previousRound.Player1;
+                if (otherPlayerPreviousRound.PlayType == Domain.Action.Attack)
                 {
                     HasOppententAttacked = true;
                     return Domain.Action.Attack;

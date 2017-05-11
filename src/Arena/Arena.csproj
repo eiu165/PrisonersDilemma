@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arena.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="PlayerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,10 +61,17 @@
       <Project>{66937a80-7355-4cb3-b72f-f95866aa5b5d}</Project>
       <Name>Lucifer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Players\MassiveRetaliation\MassiveRetaliation.csproj">
+      <Project>{98ecee5f-1afb-4d5f-8976-1704e296d918}</Project>
+      <Name>MassiveRetaliation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Players\TickForTack\TicForTac.csproj">
       <Project>{0b12e9cc-8469-43ad-9165-f2dfbea49d4e}</Project>
       <Name>TicForTac</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

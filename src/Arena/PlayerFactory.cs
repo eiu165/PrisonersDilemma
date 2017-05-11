@@ -1,10 +1,8 @@
 ﻿using Domain;
 using JesusNS;
+using LuciferNS;
+using MassiveRetaliationNs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicForTacNS;
 
 namespace Arena
@@ -16,9 +14,14 @@ namespace Arena
         MassiveRetaliation,
         TicForTac
     }
-    public class PlayerFactory
-    {
 
+    public interface IPlayerFactory
+    {
+        IPlayable GetPlayer(PlayerType type);
+    }
+
+    public class PlayerFactory: IPlayerFactory
+    {
         public IPlayable GetPlayer(PlayerType type)
         {
             switch (type)
