@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucifer", "Players\Lucifer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jesus", "Players\Jesus\Jesus.csproj", "{8A50A4D5-0214-44FC-B006-7D00108288C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickForTack", "Players\TickForTack\TickForTack.csproj", "{0B12E9CC-8469-43AD-9165-F2DFBEA49D4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicForTac", "Players\TickForTack\TicForTac.csproj", "{0B12E9CC-8469-43AD-9165-F2DFBEA49D4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena", "Arena\Arena.csproj", "{3447EFF1-AD12-4232-BA4A-A89494536FFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7A1071C3-3A24-44A0-B326-EB888C16616D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassiveRetaliation", "Players\MassiveRetaliation\MassiveRetaliation.csproj", "{98ECEE5F-1AFB-4D5F-8976-1704E296D918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{7A1071C3-3A24-44A0-B326-EB888C16616D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A1071C3-3A24-44A0-B326-EB888C16616D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A1071C3-3A24-44A0-B326-EB888C16616D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98ECEE5F-1AFB-4D5F-8976-1704E296D918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98ECEE5F-1AFB-4D5F-8976-1704E296D918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98ECEE5F-1AFB-4D5F-8976-1704E296D918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98ECEE5F-1AFB-4D5F-8976-1704E296D918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{66937A80-7355-4CB3-B72F-F95866AA5B5D} = {B024D633-76C5-40EC-A43C-B3AACA7D209B}
 		{8A50A4D5-0214-44FC-B006-7D00108288C0} = {B024D633-76C5-40EC-A43C-B3AACA7D209B}
 		{0B12E9CC-8469-43AD-9165-F2DFBEA49D4E} = {B024D633-76C5-40EC-A43C-B3AACA7D209B}
+		{98ECEE5F-1AFB-4D5F-8976-1704E296D918} = {B024D633-76C5-40EC-A43C-B3AACA7D209B}
 	EndGlobalSection
 EndGlobal

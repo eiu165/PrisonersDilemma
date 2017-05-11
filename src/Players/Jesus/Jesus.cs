@@ -6,9 +6,9 @@ namespace JesusNS
 {
     public class Jesus : IPlayable
     { 
-        public PlayType Action(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
+        public Domain.Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
         {
-            return PlayType.Cooperate;
+            return Domain.Action.Cooperate;
         }
     }
 }

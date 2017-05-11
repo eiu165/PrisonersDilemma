@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arena.cs" />
+    <Compile Include="PlayerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +57,9 @@
       <Project>{66937a80-7355-4cb3-b72f-f95866aa5b5d}</Project>
       <Name>Lucifer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Players\TickForTack\TickForTack.csproj">
+    <ProjectReference Include="..\Players\TickForTack\TicForTac.csproj">
       <Project>{0b12e9cc-8469-43ad-9165-f2dfbea49d4e}</Project>
-      <Name>TickForTack</Name>
+      <Name>TicForTac</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

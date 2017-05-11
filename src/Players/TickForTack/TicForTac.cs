@@ -5,25 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TickForTackNS
+namespace TicForTacNS
 {
-    public class TickForTack : IPlayable
+    public class TicForTac : IPlayable
     { 
-        public PlayType Action(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
+        public Domain.Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
         {
             if (previousRoundResults.Count == 0 )
             {
-                return PlayType.Cooperate;
+                return Domain.Action.Cooperate;
             }
             else 
             { 
                 var otherPlayer = (playerNumber == PlayerNumber.Player1) ? PlayerNumber.Player2 : PlayerNumber.Player1; 
                 var previousRound = previousRoundResults[previousRoundResults.Count - 1];
-                if(previousRound.Players.Single(x=> x.PlayerNumber == otherPlayer).PlayType == PlayType.Deflect)
+                if(previousRound.Players.Single(x=> x.PlayerNumber == otherPlayer).PlayType == Domain.Action.Attack)
                 {
-                    return PlayType.Deflect;
+                    return Domain.Action.Attack;
                 }
-                return PlayType.Cooperate;
+                return Domain.Action.Cooperate;
             }
         }
     }

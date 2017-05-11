@@ -8,30 +8,31 @@ namespace Domain
 {
     public interface IPlayable
     {
-        PlayType Action(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber);
+        Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber);
     }
 
-    public enum PlayType
+    public enum Action
     {
-        Deflect = 0,
+        Attack = 0,
         Cooperate = 1
     }
+
     public enum PlayerNumber
     {
         Player1 = 1,
         Player2 = 2
     }
 
-
     public class PlayerResult
     {
-        public PlayerNumber PlayerNumber { get; set; }
-        public int PlayerScore { get; set; }
-        public PlayType PlayType { get; set; }
+        public int RoundScore { get; set; }
+        public int Total { get; set; }
+        public Action PlayType { get; set; }
     }
 
     public class RoundResult
     {
-        public IList<PlayerResult> Players { get; set; } 
+        public PlayerResult Player1 { get; set; }
+        public PlayerResult Player2 { get; set; }
     }
 }

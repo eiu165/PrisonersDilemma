@@ -2,18 +2,17 @@
 using JesusNS;
 using LuciferNS;
 using System.Collections.Generic;
-using TickForTackNS;
-using System.Collections.Generic;
+using TicForTacNS; 
 using System.Linq;
 
 namespace Arena
 {
     public class Game
     {
-        public int DeflectWhenOpponetCooperates = 0;
+        public int AttackWhenOpponetCooperates = 0;
         public int CooperateWhenOpponetCooperates = 1;
-        public int DeflectWhenOpponetDeflects = 2;
-        public int CooperateWhenOpponetDeflects = 3;
+        public int AttackWhenOpponetAttacks = 2;
+        public int CooperateWhenOpponetAttacks = 3;
 
         public int NumberOfRounds = 10; 
 
@@ -27,36 +26,36 @@ namespace Arena
         
         public IList<RoundResult> Play()
         { 
-            var previousRoundResults = new  List<RoundResult>();
+            var roundResults = new  List<RoundResult>(); 
             for (int i=0; i<NumberOfRounds; i++)
             {
                 var result = new RoundResult();  
-                result.Players[0].PlayType = _player1.Action(previousRoundResults, PlayerNumber.Player1);
-                result.Players[1].PlayType = _player1.Action(previousRoundResults, PlayerNumber.Player2);
-                if (result.Players[0].PlayType == PlayType.Cooperate && result.Players[1].PlayType == PlayType.Cooperate)
+                result.Player1.PlayType = _player1.Execute(roundResults, PlayerNumber.Player1);
+                result.Player2.PlayType = _player2.Execute(roundResults, PlayerNumber.Player2);
+                if (result.Player1.PlayType == Action.Cooperate && result.Player2.PlayType == Action.Cooperate)
                 {
-                    result.Players[0].PlayerScore = CooperateWhenOpponetCooperates;
-                    result.Players[1].PlayerScore = CooperateWhenOpponetCooperates;
+                    result.Player1.RoundScore = CooperateWhenOpponetCooperates;
+                    result.Player2.RoundScore = CooperateWhenOpponetCooperates;
                 }
-                else if (result.Players[0].PlayType == PlayType.Deflect && result.Players[1].PlayType == PlayType.Deflect)
+                else if (result.Player1.PlayType == Action.Attack && result.Player2.PlayType == Action.Attack)
                 {
-                    result.Players[0].PlayerScore = DeflectWhenOpponetDeflects;
-                    result.Players[1].PlayerScore = DeflectWhenOpponetDeflects;
+                    result.Player1.RoundScore = AttackWhenOpponetAttacks;
+                    result.Player2.RoundScore = AttackWhenOpponetAttacks;
                 }
-                else if (result.Players[0].PlayType == PlayType.Deflect && result.Players[1].PlayType == PlayType.Cooperate)
+                else if (result.Player1.PlayType == Action.Attack && result.Player2.PlayType == Action.Cooperate)
                 {
-                    result.Players[0].PlayerScore = DeflectWhenOpponetCooperates;
-                    result.Players[1].PlayerScore = CooperateWhenOpponetDeflects;
+                    result.Player1.RoundScore = AttackWhenOpponetCooperates;
+                    result.Player2.RoundScore = CooperateWhenOpponetAttacks;
                 }
-                else if (result.Players[0].PlayType == PlayType.Cooperate && result.Players[1].PlayType == PlayType.Deflect)
+                else if (result.Player1.PlayType == Action.Cooperate && result.Player2.PlayType == Action.Attack)
                 {
-                    result.Players[0].PlayerScore = CooperateWhenOpponetDeflects;
-                    result.Players[1].PlayerScore = DeflectWhenOpponetCooperates;
+                    result.Player1.RoundScore = CooperateWhenOpponetAttacks;
+                    result.Player2.RoundScore = AttackWhenOpponetCooperates;
                 }
-                previousRoundResults.Add(result);
+                roundResults.Add(result);
             }
-            var player1Score = previousRoundResults.ForEach(x => x.Players.);
-            return previousRoundResults;
+            var player1Score = roundResults.ForEach(x => x.Player1.RoundScore);
+            return roundResults;
 
         }
 

@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace LuciferNS
 {
+    /// <summary>
+    /// stragity: always attack
+    /// </summary>
     public class Lucifer : IPlayable
     { 
-        public PlayType Action(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
+        public Domain.Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
         {
-            return PlayType.Deflect;
+            return Domain.Action.Attack;
         }
     }
 }
