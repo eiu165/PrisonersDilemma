@@ -8,11 +8,11 @@ using System.Linq;
 namespace Arena
 {
 
-    public class Arena
+    public class Generation
     {
         private IPlayerFactory _playerFactory;
          
-        public Arena(IPlayerFactory playerFactory)
+        public Generation(IPlayerFactory playerFactory)
         {
             _playerFactory = playerFactory;
         }

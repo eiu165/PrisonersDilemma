@@ -10,8 +10,8 @@ namespace Arena.Test
         public void Play100()
         {
             Assert.True(false);
-            var arena = new Arena(new PlayerFactory());
-            arena.Run();
+            var generation = new Generation(new PlayerFactory());
+            generation.Run();
 
         }
     }
