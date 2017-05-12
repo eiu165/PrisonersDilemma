@@ -49,9 +49,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Arena\Arena.csproj">
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{7a1071c3-3a24-44a0-b326-eb888c16616d}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Players\Jesus\Jesus.csproj">
+      <Project>{8a50a4d5-0214-44fc-b006-7d00108288c0}</Project>
+      <Name>Jesus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Players\Lucifer\Lucifer.csproj">
+      <Project>{66937a80-7355-4cb3-b72f-f95866aa5b5d}</Project>
+      <Name>Lucifer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Players\MassiveRetaliation\MassiveRetaliation.csproj">
+      <Project>{98ecee5f-1afb-4d5f-8976-1704e296d918}</Project>
+      <Name>MassiveRetaliation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Players\TicForTac\TicForTac.csproj">
+      <Project>{0b12e9cc-8469-43ad-9165-f2dfbea49d4e}</Project>
+      <Name>TicForTac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
       <Project>{3447eff1-ad12-4232-ba4a-a89494536ffe}</Project>
-      <Name>Arena</Name>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

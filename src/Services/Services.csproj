@@ -7,8 +7,8 @@
     <ProjectGuid>{3447EFF1-AD12-4232-BA4A-A89494536FFE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Arena</RootNamespace>
-    <AssemblyName>Arena</AssemblyName>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -65,7 +65,7 @@
       <Project>{98ecee5f-1afb-4d5f-8976-1704e296d918}</Project>
       <Name>MassiveRetaliation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Players\TickForTack\TicForTac.csproj">
+    <ProjectReference Include="..\Players\TicForTac\TicForTac.csproj">
       <Project>{0b12e9cc-8469-43ad-9165-f2dfbea49d4e}</Project>
       <Name>TicForTac</Name>
     </ProjectReference>

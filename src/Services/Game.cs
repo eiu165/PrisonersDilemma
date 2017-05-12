@@ -37,8 +37,6 @@ namespace Arena
             _player1 =  player1;
             _player2 = player2;
             _gameData = new GameData();
-            //_gameData.Player1Name =  _player1.GetType().Name;
-            //_gameData.Player2Name =   _player2.GetType().Name;
 
         }
 
