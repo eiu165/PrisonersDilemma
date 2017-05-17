@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
-using Moq; 
+using Moq;
+using Services;
 
 namespace Arena.Test
 {
@@ -15,4 +16,25 @@ namespace Arena.Test
 
         }
     }
+
+
+    [TestFixture]
+    public class ColorServiceTest
+    {
+        [Test]
+        public void ColorLoopTest()
+        { 
+            //arrange
+            var colorService = new ColorService( );
+
+            //act
+            var result = colorService.ColorLoop();
+
+            //assert
+            Assert.AreEqual("", result);
+
+        }
+    }
+
+
 }
