@@ -16,7 +16,9 @@ namespace Arena
         }
         public List<RoundResult> RoundResults { get; set; }
         public string Player1Name { get; set; }
-        public string Player2Name { get; set; } 
+        public string Player2Name { get; set; }
+        public int Player1Score { get; set; }
+        public int Player2Score { get; set; }
 
     }
 
@@ -37,10 +39,12 @@ namespace Arena
             _player1 =  player1;
             _player2 = player2;
             _gameData = new GameData();
+            _gameData.Player1Name = player1.GetType().Name ;
+            _gameData.Player2Name = player2.GetType().Name;
 
         }
 
-        public IList<RoundResult> Play()
+        public GameData Play()
         {
             _gameData.RoundResults = new List<RoundResult>();
             for (int i = 0; i < NumberOfRounds; i++)
@@ -70,10 +74,10 @@ namespace Arena
                 }
                 _gameData.RoundResults.Add(result);
             }
-            var player1Score = _gameData.RoundResults.Sum(x => x.Player1.RoundScore);
-            var player2Score = _gameData.RoundResults.Sum(x => x.Player2.RoundScore);
+            _gameData.Player1Score = _gameData.RoundResults.Sum(x => x.Player1.RoundScore);
+            _gameData.Player2Score = _gameData.RoundResults.Sum(x => x.Player2.RoundScore);
              
-            return _gameData.RoundResults;
+            return _gameData;
 
         }
 

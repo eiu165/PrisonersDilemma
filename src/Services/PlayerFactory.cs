@@ -1,7 +1,9 @@
 ﻿using Domain;
-using JesusNS;
-using LuciferNS;
-using MassiveRetaliationNs;
+using JesusNamespace;
+using LuciferNamespace;
+using MassiveRetaliationNamespace;
+using TesterNamespace;
+using RandomManNamespace;
 using System;
 using TicForTacNS;
 
@@ -12,7 +14,9 @@ namespace Arena
         Jesus, 
         Lucifer,
         MassiveRetaliation,
-        TicForTac
+        TicForTac,
+        RandomMan,
+        Tester
     }
 
     public interface IPlayerFactory
@@ -33,7 +37,11 @@ namespace Arena
                 case PlayerType.MassiveRetaliation:
                     return new MassiveRetaliation();
                 case PlayerType.TicForTac:
-                    return new TicForTac(); 
+                    return new TicForTac();
+                case PlayerType.RandomMan:
+                    return new RandomMan();
+                case PlayerType.Tester:
+                    return new Tester();
                 default:
                     throw new NotSupportedException();
             }

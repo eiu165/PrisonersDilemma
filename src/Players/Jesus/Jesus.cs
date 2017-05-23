@@ -2,7 +2,7 @@
 using System.Collections.Generic; 
 using Domain;
 
-namespace JesusNS
+namespace JesusNamespace
 {
     public class Jesus : IPlayable
     { 

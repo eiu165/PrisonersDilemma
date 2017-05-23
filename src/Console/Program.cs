@@ -1,12 +1,6 @@
-﻿
-using Arena;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Arena; 
 
-namespace Console
+namespace ConsoleNamespace
 {
     class Program
     {
@@ -14,7 +8,9 @@ namespace Console
         {
 
             var generation = new Generation(new PlayerFactory());
+
             generation.Run();
+            System.Console.ReadLine();
         }
     }
 }

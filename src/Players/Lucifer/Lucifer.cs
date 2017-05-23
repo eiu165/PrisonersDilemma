@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LuciferNS
+namespace LuciferNamespace
 {
     /// <summary>
     /// stragity: always attack
