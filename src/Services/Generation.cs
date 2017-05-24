@@ -21,7 +21,7 @@ namespace Arena
         {
             Players = new List<PlayerType> {
                   PlayerType.Jesus
-                , PlayerType.Lucifer
+               // , PlayerType.Lucifer
                 , PlayerType.TicForTac
                 , PlayerType.MassiveRetaliation
                 , PlayerType.RandomMan

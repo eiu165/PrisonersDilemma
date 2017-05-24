@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainObjects.cs" />
+    <Compile Include="Enums\Action.cs" />
     <Compile Include="GameData.cs" />
+    <Compile Include="Interfaces\IPlayable.cs" />
+    <Compile Include="Enums\PlayerNumber.cs" />
+    <Compile Include="PlayerResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
