@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Services;
 using System;
 using System.Collections.Generic; 
 using System.Linq;
@@ -18,7 +19,8 @@ namespace Arena
 
         public void Run()
         {
-            Players = new List<PlayerType> { PlayerType.Jesus
+            Players = new List<PlayerType> {
+                  PlayerType.Jesus
                 , PlayerType.Lucifer
                 , PlayerType.TicForTac
                 , PlayerType.MassiveRetaliation

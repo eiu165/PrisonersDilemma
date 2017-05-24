@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameData.cs" />
     <Compile Include="Generation.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IPlayerFactory.cs" />
     <Compile Include="PlayerFactory.cs" />
+    <Compile Include="PlayerType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

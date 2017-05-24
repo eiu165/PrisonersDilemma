@@ -26,7 +26,7 @@ namespace TesterNamespace
             else
             {
                 int randomNumber = GetRandomNumber(1, 10);
-                if (randomNumber > 1) // 00 % of the time  Cooperate
+                if (randomNumber > 1) // 10 % of the time  Cooperate
                 {
                     Console.WriteLine(string.Format("Tester: {0}    the action is {1}", randomNumber, Domain.Action.Cooperate.ToString()));
                     return Domain.Action.Cooperate;

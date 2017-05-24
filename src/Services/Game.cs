@@ -8,20 +8,6 @@ using System.Threading.Tasks;
 namespace Arena
 {
 
-    public class GameData
-    {
-        public GameData()
-        {
-            RoundResults = new List<RoundResult>();
-        }
-        public List<RoundResult> RoundResults { get; set; }
-        public string Player1Name { get; set; }
-        public string Player2Name { get; set; }
-        public int Player1Score { get; set; }
-        public int Player2Score { get; set; }
-
-    }
-
     public class Game
     {
         private  GameData _gameData { get; set; }
@@ -30,7 +16,7 @@ namespace Arena
         public int AttackWhenOpponetAttacks = 2;
         public int CooperateWhenOpponetAttacks = 3;
 
-        public int NumberOfRounds = 10;
+        public int NumberOfRounds = 100;
 
         private IPlayable _player1 { get; set; }
         private IPlayable _player2 { get; set; }

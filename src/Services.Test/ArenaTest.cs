@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
-using Moq; 
+using Moq;
+using Services;
 
 namespace Arena.Test
 {
@@ -9,9 +10,9 @@ namespace Arena.Test
         [Test]
         public void Play100()
         {
-            Assert.True(false);
             var generation = new Generation(new PlayerFactory());
             generation.Run();
+            Assert.True(true);
 
         }
     }

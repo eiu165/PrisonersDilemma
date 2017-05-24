@@ -7,22 +7,8 @@ using RandomManNamespace;
 using System;
 using TicForTacNS;
 
-namespace Arena
-{
-    public enum PlayerType
-    {
-        Jesus, 
-        Lucifer,
-        MassiveRetaliation,
-        TicForTac,
-        RandomMan,
-        Tester
-    }
-
-    public interface IPlayerFactory
-    {
-        IPlayable GetPlayer(PlayerType type);
-    }
+namespace Services
+{ 
 
     public class PlayerFactory: IPlayerFactory
     {
