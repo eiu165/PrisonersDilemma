@@ -1,19 +1,20 @@
 ﻿using NUnit.Framework;
-using Moq;
-using Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Arena.Test
+namespace Services.Test
 {
     [TestFixture]
     public class ArenaTest
     {
         [Test]
-        public void Play100()
+        public void TestMethod()
         {
-            var generation = new Generation(new PlayerFactory());
-            generation.Run();
-            Assert.True(true);
-
+            // TODO: Add your test code here
+            Assert.Pass("Your first passing test");
         }
     }
 }
