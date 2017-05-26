@@ -22,12 +22,12 @@ namespace RandomManNamespace
             int randomNumber = GetRandomNumber(1, 100); 
             if (randomNumber % 2 == 0)
             {
-                Console.WriteLine(string.Format("the random number is: {0}    the action is {1}", randomNumber, Domain.Action.Cooperate.ToString()));
+                //Console.WriteLine(string.Format("the random number is: {0}    the action is {1}", randomNumber, Domain.Action.Cooperate.ToString()));
                 return Domain.Action.Cooperate;
             }
             else
             {
-                Console.WriteLine(string.Format("the random number is: {0}    the action is {1}", randomNumber, Domain.Action.Attack.ToString()));
+                //Console.WriteLine(string.Format("the random number is: {0}    the action is {1}", randomNumber, Domain.Action.Attack.ToString()));
                 return Domain.Action.Attack;
             }
 

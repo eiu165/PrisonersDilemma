@@ -28,12 +28,12 @@ namespace TesterNamespace
                 int randomNumber = GetRandomNumber(1, 10);
                 if (randomNumber > 1) // 10 % of the time  Cooperate
                 {
-                    Console.WriteLine(string.Format("Tester: {0}    the action is {1}", randomNumber, Domain.Action.Cooperate.ToString()));
+                    //Console.WriteLine(string.Format("Tester: {0}    the action is {1}", randomNumber, Domain.Action.Cooperate.ToString()));
                     return Domain.Action.Cooperate;
                 }
                 else
                 {
-                    Console.WriteLine(string.Format("Tester: {0}    the action is {1}", randomNumber, Domain.Action.Attack.ToString()));
+                    //Console.WriteLine(string.Format("Tester: {0}    the action is {1}", randomNumber, Domain.Action.Attack.ToString()));
                     return Domain.Action.Attack;
                 }
             }
