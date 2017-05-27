@@ -7,12 +7,12 @@
   
   <ItemGroup>  
     <ProjectReference Include="../Domain/Domain.csproj" />
-    <ProjectReference Include="../Players/Jesus/Jesus.csproj" />
-    <ProjectReference Include="../Players/Lucifer/Lucifer.csproj" />
-    <ProjectReference Include="../Players/MassiveRetaliation/MassiveRetaliation.csproj" />
-    <ProjectReference Include="../Players/RandomMan/RandomMan.csproj" />
-    <ProjectReference Include="../Players/Tester/Tester.csproj" />
-    <ProjectReference Include="../Players/TicForTac/TicForTac.csproj" />
+    <ProjectReference Include="../Bot/Bot.Jesus/Bot.Jesus.csproj" />
+    <ProjectReference Include="../Bot/Bot.Lucifer/Bot.Lucifer.csproj" />
+    <ProjectReference Include="../Bot/Bot.MassiveRetaliation/Bot.MassiveRetaliation.csproj" />
+    <ProjectReference Include="../Bot/Bot.RandomMan/Bot.RandomMan.csproj" />
+    <ProjectReference Include="../Bot/Bot.Tester/Bot.Tester.csproj" />
+    <ProjectReference Include="../Bot/Bot.TicForTac/Bot.TicForTac.csproj" />
   </ItemGroup>
   
   
