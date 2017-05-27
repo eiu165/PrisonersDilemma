@@ -1,5 +1,5 @@
 ﻿using Arena;
-using Services;
+using Service;
 
 namespace ConsoleNamespace
 {
