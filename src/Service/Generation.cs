@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Service
 {
-    public partial class Generation
+    public   class Generation
     {
         private IPlayerFactory _playerFactory;
 
