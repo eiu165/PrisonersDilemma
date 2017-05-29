@@ -1,12 +1,11 @@
-﻿using Domain;
+﻿using Domain; 
 using Service;
 using System;
 using System.Collections.Generic; 
 using System.Linq;
 
-namespace Arena
-{
-
+namespace Service
+{ 
     public class Generation
     {
         private IPlayerFactory _playerFactory;
@@ -15,12 +14,12 @@ namespace Arena
         {
             _playerFactory = playerFactory;
         }
-        public IList<PlayerType> Players { get; set; }
+        public IList<Domain.PlayerType> Players { get; set; }
 
         public void Run()
         {
-            Players = new List<PlayerType> {
-                  PlayerType.Jesus
+            Players = new List<Domain.PlayerType> {
+                  Domain.PlayerType.Jesus
                // , PlayerType.Lucifer
                 , PlayerType.TicForTac
                 , PlayerType.MassiveRetaliation

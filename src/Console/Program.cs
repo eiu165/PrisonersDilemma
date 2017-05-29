@@ -1,4 +1,4 @@
-﻿using Arena;
+﻿
 using Service;
 
 namespace ConsoleNamespace
@@ -8,7 +8,7 @@ namespace ConsoleNamespace
         static void Main(string[] args)
         {
 
-            var generation = new Generation(new PlayerFactory());
+            var generation = new Generation(new Bot.Factory.PlayerFactory());
 
             generation.Run();
             System.Console.ReadLine();

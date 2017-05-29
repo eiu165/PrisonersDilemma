@@ -6,13 +6,8 @@
 
   
   <ItemGroup>  
-    <ProjectReference Include="../Domain/Domain.csproj" />
-    <ProjectReference Include="../Bot/Bot.Jesus/Bot.Jesus.csproj" />
-    <ProjectReference Include="../Bot/Bot.Lucifer/Bot.Lucifer.csproj" />
-    <ProjectReference Include="../Bot/Bot.MassiveRetaliation/Bot.MassiveRetaliation.csproj" />
-    <ProjectReference Include="../Bot/Bot.RandomMan/Bot.RandomMan.csproj" />
-    <ProjectReference Include="../Bot/Bot.Tester/Bot.Tester.csproj" />
-    <ProjectReference Include="../Bot/Bot.TicForTac/Bot.TicForTac.csproj" />
+    <ProjectReference Include="../Domain/Domain.csproj" /> 
+    <ProjectReference Include="../Bot/Bot.Factory/Bot.Factory.csproj" /> 
   </ItemGroup>
   
   

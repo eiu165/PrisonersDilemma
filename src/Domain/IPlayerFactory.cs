@@ -1,15 +1,14 @@
-﻿using Arena;
-using Domain;
+﻿using Domain; 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Domain
 {
     public interface IPlayerFactory
     {
-        IPlayable GetPlayer(PlayerType type);
+        Domain.IPlayable GetPlayer(Domain.PlayerType type);
     }
 }

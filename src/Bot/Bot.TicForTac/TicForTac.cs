@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicForTacNS
+namespace TicForTacNamespace
 {
     public class TicForTac : IPlayable
     { 

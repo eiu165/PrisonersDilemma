@@ -1,14 +1,9 @@
-﻿using Domain;
-using JesusNamespace;
-using LuciferNamespace;
-using MassiveRetaliationNamespace;
-using TesterNamespace;
-using RandomManNamespace;
-using System;
-using TicForTacNS;
+﻿using System;
+using Domain; 
 
-namespace Service
-{ 
+
+namespace Bot.Factory
+{
 
     public class PlayerFactory: IPlayerFactory
     {
@@ -17,17 +12,17 @@ namespace Service
             switch (type)
             {
                 case PlayerType.Jesus:
-                    return new Jesus();
+                    return new JesusNamespace.Jesus();
                 case PlayerType.Lucifer:
-                    return new Lucifer();
+                    return new LuciferNamespace.Lucifer();
                 case PlayerType.MassiveRetaliation:
-                    return new MassiveRetaliation();
+                    return new  MassiveRetaliationNamespace.MassiveRetaliation();
                 case PlayerType.TicForTac:
-                    return new TicForTac();
+                    return new  TicForTacNamespace.TicForTac();
                 case PlayerType.RandomMan:
-                    return new RandomMan();
+                    return new  RandomManNamespace.RandomMan();
                 case PlayerType.Tester:
-                    return new Tester();
+                    return new  TesterNamespace.Tester();
                 default:
                     throw new NotSupportedException();
             }
