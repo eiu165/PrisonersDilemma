@@ -10,8 +10,7 @@ namespace ConsoleNamespace
 
             var generation = new Generation(new Bot.Factory.PlayerFactory());
 
-            generation.Run();
-            System.Console.ReadLine();
+            generation.Run(); 
         }
     }
 }

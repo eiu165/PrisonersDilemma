@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq; 
 
 namespace Service
-{
-
+{ 
     public class Game
     {
         private  GameData _gameData { get; set; }
@@ -13,7 +12,7 @@ namespace Service
         public int AttackWhenOpponetAttacks = 2;
         public int CooperateWhenOpponetAttacks = 3;
 
-        public int NumberOfRounds = 100;
+        public int NumberOfRounds = 3;
 
         private IPlayable _player1 { get; set; }
         private IPlayable _player2 { get; set; }

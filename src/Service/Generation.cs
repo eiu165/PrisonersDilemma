@@ -1,12 +1,12 @@
-﻿using Domain; 
+﻿using Domain;
 using Service;
 using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Service
-{ 
-    public class Generation
+{
+    public partial class Generation
     {
         private IPlayerFactory _playerFactory;
 
@@ -19,8 +19,8 @@ namespace Service
         public void Run()
         {
             Players = new List<Domain.PlayerType> {
-               // , PlayerType.Lucifer
-                 PlayerType.TicForTac
+                 PlayerType.Lucifer
+                , PlayerType.TicForTac
                 , PlayerType.Tester
                 , PlayerType.MassiveRetaliation
                 , PlayerType.RandomMan
@@ -37,48 +37,43 @@ namespace Service
 
                 }
             }
-            var playersScore = new List<PlayerScoreForGeneration>();
+            var playersScore = new Dictionary<string, int>();
             foreach (var game in gameData)
             {
+                if (game.Player1Name == "RandomMan"  || game.Player2Name == "RandomMan")
                 Console.WriteLine(string.Format(" {0}:{1} - {2}:{3}"
                     , game.Player1Name, game.Player1Score
                     , game.Player2Name, game.Player2Score));
 
-                var name = game.Player1Name;
-                var playerScore = playersScore.SingleOrDefault(x => x.Name == name);
-                if (playerScore == null)
+                var name = game.Player1Name; 
+                if (!playersScore.ContainsKey(name))
                 {
-                    playersScore.Add(new PlayerScoreForGeneration { Name = name, Score = game.Player1Score });
+                    playersScore.Add(  name,   game.Player1Score  );
                 }
                 else
                 {
-                    playerScore.Score += game.Player1Score;
+                    int score = playersScore[name]; 
+                    playersScore[name] = score+ game.Player1Score;
                 }
 
-                name = game.Player2Name;
-                playerScore = playersScore.SingleOrDefault(x => x.Name == name);
-                if (playerScore == null)
+                name = game.Player2Name; 
+                if (!playersScore.ContainsKey(name))
                 {
-                    playersScore.Add(new PlayerScoreForGeneration { Name = name, Score = game.Player2Score });
+                    playersScore.Add(  name,  game.Player2Score  );
                 }
                 else
                 {
-                    playerScore.Score += game.Player1Score;
+                    int score = playersScore[name];
+                    playersScore[name] = score+ game.Player1Score;
                 }
 
             }
             Console.WriteLine(  " ================================ "  );
-            foreach (var playerScore in playersScore.OrderBy(x=> x.Score))
+            foreach (var playerScore in playersScore )
             { 
                 Console.WriteLine(string.Format(" {0}:{1}  "
-                    , playerScore.Name, playerScore.Score));
+                    , playerScore.Key, playerScore.Value));
             }
-        }
-
-        public class PlayerScoreForGeneration
-        {
-            public string Name { get; set; }
-            public int Score { get; set; }
         }
     }
 }
