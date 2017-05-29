@@ -19,12 +19,12 @@ namespace Service
         public void Run()
         {
             Players = new List<Domain.PlayerType> {
-                  Domain.PlayerType.Jesus
                // , PlayerType.Lucifer
-                , PlayerType.TicForTac
+                 PlayerType.TicForTac
+                , PlayerType.Tester
                 , PlayerType.MassiveRetaliation
                 , PlayerType.RandomMan
-                , PlayerType.Tester
+                , PlayerType.Jesus
             };
 
             var gameData = new List<GameData>();
