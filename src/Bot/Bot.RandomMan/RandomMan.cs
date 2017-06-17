@@ -4,6 +4,10 @@ using System;
 
 namespace RandomManNamespace
 {
+
+    /// <summary>
+    /// Strategy: Randomly Cooperate 
+    /// </summary>
     public class RandomMan : IPlayable
     {
         //Function to get random number

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace LuciferNamespace
 {
     /// <summary>
-    /// strategy: always attack
+    /// Strategy: always Attack
     /// </summary>
     public class Lucifer : IPlayable
     { 

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace MassiveRetaliationNamespace
 {
+
+    /// <summary>
+    /// Strategy: Cooperate until oppenent Attacks, once oppenent attacks, never cooperate
+    /// </summary>
     public class MassiveRetaliation : IPlayable
     {
         private bool HasOppententAttacked = false;

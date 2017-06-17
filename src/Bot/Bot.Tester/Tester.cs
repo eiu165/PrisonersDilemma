@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System;
 
-namespace TesterNamespace 
+namespace TesterNamespace
 {
+    /// <summary>
+    /// Strategy: usually Cooperate, Randomly Attack 10% of the time to test the oppenent 
+    /// </summary>
     public class Tester : IPlayable
     {
         //Function to get random number

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TicForTacNamespace
 {
+    /// <summary>
+    /// Strategy: An eye for an eye ( Cooperate at first, Then respond to oppenent with attack if other bot attacks )
+    /// </summary>
     public class TicForTac : IPlayable
     { 
         public Domain.Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)

@@ -4,7 +4,9 @@ using Domain;
 
 namespace JesusNamespace
 {
-    ///Strategy: always Cooperate
+    /// <summary> 
+    /// Strategy: always Cooperate
+    /// </summary>
     public class Jesus : IPlayable
     { 
         public Domain.Action Execute(IList<RoundResult> previousRoundResults, PlayerNumber playerNumber)
