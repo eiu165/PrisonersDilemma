@@ -21,8 +21,8 @@ namespace Service
             _player1 =  player1;
             _player2 = player2;
             _gameData = new GameData();
-            _gameData.Player1Name = player1.GetType().Name ;
-            _gameData.Player2Name = player2.GetType().Name;
+            _gameData.Bot1Name = player1.GetType().Name ;
+            _gameData.Bot2Name = player2.GetType().Name;
 
         }
 
@@ -56,8 +56,8 @@ namespace Service
                 }
                 _gameData.RoundResults.Add(result);
             }
-            _gameData.Player1Score = _gameData.RoundResults.Sum(x => x.Player1.RoundScore);
-            _gameData.Player2Score = _gameData.RoundResults.Sum(x => x.Player2.RoundScore);
+            _gameData.Bot1Score = _gameData.RoundResults.Sum(x => x.Player1.RoundScore);
+            _gameData.Bot2Score = _gameData.RoundResults.Sum(x => x.Player2.RoundScore);
              
             return _gameData;
 

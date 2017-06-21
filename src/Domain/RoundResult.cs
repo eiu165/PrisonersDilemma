@@ -4,10 +4,10 @@
     {
         public RoundResult()
         {
-            Player1 = new PlayerResult();
-            Player2 = new PlayerResult(); 
+            Player1 = new PlayResult();
+            Player2 = new PlayResult(); 
         }
-        public PlayerResult Player1 { get; set; }
-        public PlayerResult Player2 { get; set; }
+        public PlayResult Player1 { get; set; }
+        public PlayResult Player2 { get; set; }
     }
 }

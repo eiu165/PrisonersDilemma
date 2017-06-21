@@ -6,37 +6,46 @@ using System.Linq;
 
 namespace Service
 {
-    public   class Generation
-    {
-        private IPlayerFactory _playerFactory;
 
-        public Generation(IPlayerFactory playerFactory)
+    public class BotService
+    {
+        private IBotFactory _playerFactory;
+        public BotService(IBotFactory playerFactory)
         {
-            _playerFactory = playerFactory;
+            _playerFactory = playerFactory; 
         }
-        public IList<Domain.PlayerType> Players { get; set; }
+
+    }
+
+
+
+    public   class Generation
+    { 
+        private BotService _botService;
+
+        public Generation(BotService botService)
+        { 
+            _botService = botService;
+
+        }
+        private IList<Domain.BotType> _players { get; set; }
 
         public void Run()
         {
-            Players = new List<Domain.PlayerType> {
-                 PlayerType.Lucifer
-                , PlayerType.TicForTac
-                //, PlayerType.Tester
-                , PlayerType.MassiveRetaliation
-                //, PlayerType.RandomMan
-                //, PlayerType.Jesus
-            };
+            _players =  _botService.GetPlayers();
 
             var gameData = new List<GameData>();
-            for (int i = 0; i < Players.Count; i++)
+  
+            for (int i = 0; i <  _players.Count; i++)
             {
-                for (int j = i + 1; j < Players.Count; j++)
+                for (int j = i + 1; j < _players.Count; j++)
                 {
-                    var game = new Game(_playerFactory.GetPlayer(Players[i]), _playerFactory.GetPlayer(Players[j]));
-                    gameData.Add(game.Play());
-
+                    var game = new Game( _players[i], _players[j] );
+                    gameData.Add(game.Play()); 
                 }
             }
+
+
             var playersScore = AddPlayerScores(gameData);
             Console.WriteLine(" ================================ ");
             foreach (var playerScore in playersScore)
@@ -53,29 +62,29 @@ namespace Service
             {
                 
                 Console.WriteLine(string.Format(" {0}:{1} - {2}:{3}"
-                        , game.Player1Name, game.Player1Score
-                        , game.Player2Name, game.Player2Score));
+                        , game.Bot1Name, game.Bot1Score
+                        , game.Bot2Name, game.Bot2Score));
 
-                var name = game.Player1Name;
+                var name = game.Bot1Name;
                 if (!playersScore.ContainsKey(name))
                 {
-                    playersScore.Add(name, game.Player1Score);
+                    playersScore.Add(name, game.Bot1Score);
                 }
                 else
                 {
                     int score = playersScore[name];
-                    playersScore[name] = score + game.Player1Score;
+                    playersScore[name] = score + game.Bot1Score;
                 }
 
-                name = game.Player2Name;
+                name = game.Bot2Name;
                 if (!playersScore.ContainsKey(name))
                 {
-                    playersScore.Add(name, game.Player2Score);
+                    playersScore.Add(name, game.Bot2Score);
                 }
                 else
                 {
                     int score = playersScore[name];
-                    playersScore[name] = score + game.Player1Score;
+                    playersScore[name] = score + game.Bot1Score;
                 }
             }
             return playersScore;

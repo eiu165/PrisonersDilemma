@@ -1,6 +1,6 @@
 ﻿namespace Domain
 {
-    public class PlayerResult
+    public class PlayResult
     {
         public int RoundScore { get; set; }
         public int Total { get; set; }

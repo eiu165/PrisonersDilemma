@@ -8,7 +8,7 @@ namespace Service.Test
 {
     
     
-    public class Class1
+    public class GenerationTest
     {
         [Fact]
         public void PassingTest()

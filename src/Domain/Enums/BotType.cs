@@ -1,6 +1,6 @@
 ﻿namespace Domain
 {
-    public enum PlayerType
+    public enum BotType
     {
         Jesus, 
         Lucifer,

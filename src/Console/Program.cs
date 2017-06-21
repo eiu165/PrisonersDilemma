@@ -8,7 +8,8 @@ namespace ConsoleNamespace
         static void Main(string[] args)
         {
 
-            var generation = new Generation(new Bot.Factory.PlayerFactory());
+            var botService = new BotService(new Bot.Factory.BotFactory()); 
+            var generation = new Generation(botService);
 
             generation.Run(); 
         }

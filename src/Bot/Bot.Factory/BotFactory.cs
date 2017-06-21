@@ -5,7 +5,7 @@ using Domain;
 namespace Bot.Factory
 {
 
-    public class PlayerFactory: IPlayerFactory
+    public class BotFactory: IBotFactory
     {
         public IPlayable GetPlayer(PlayerType type)
         {
