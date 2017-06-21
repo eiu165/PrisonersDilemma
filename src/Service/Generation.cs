@@ -21,10 +21,10 @@ namespace Service
             Players = new List<Domain.PlayerType> {
                  PlayerType.Lucifer
                 , PlayerType.TicForTac
-                , PlayerType.Tester
+                //, PlayerType.Tester
                 , PlayerType.MassiveRetaliation
-                , PlayerType.RandomMan
-                , PlayerType.Jesus
+                //, PlayerType.RandomMan
+                //, PlayerType.Jesus
             };
 
             var gameData = new List<GameData>();
@@ -51,8 +51,8 @@ namespace Service
             var playersScore = new Dictionary<string, int>();
             foreach (var game in gameData)
             {
-                if (game.Player1Name == "RandomMan" || game.Player2Name == "RandomMan")
-                    Console.WriteLine(string.Format(" {0}:{1} - {2}:{3}"
+                
+                Console.WriteLine(string.Format(" {0}:{1} - {2}:{3}"
                         , game.Player1Name, game.Player1Score
                         , game.Player2Name, game.Player2Score));
 

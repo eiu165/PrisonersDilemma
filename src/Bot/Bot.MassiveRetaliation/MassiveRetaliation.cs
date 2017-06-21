@@ -5,7 +5,7 @@ namespace MassiveRetaliationNamespace
 {
 
     /// <summary>
-    /// Strategy: Cooperate until oppenent Attacks, once oppenent attacks, never cooperate
+    /// Strategy: Cooperate until oppenent Attacks, once oppenent attacks once, never cooperate
     /// </summary>
     public class MassiveRetaliation : IPlayable
     {

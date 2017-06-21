@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TicForTacNamespace
 {
     /// <summary>
-    /// Strategy: An eye for an eye ( Cooperate at first, Then respond to oppenent with attack if other bot attacks )
+    /// Strategy: An eye for an eye ( Cooperate at first, Then respond to oppenent with 1 attack if other bot attacked in the previous round )
     /// </summary>
     public class TicForTac : IPlayable
     { 
