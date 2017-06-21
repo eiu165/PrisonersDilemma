@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IPlayerFactory
+    public interface IBotFactory
     {
-        Domain.IPlayable GetPlayer(Domain.PlayerType type);
+        Domain.IPlayable GetPlayer(Domain.BotType type);
     }
 }
