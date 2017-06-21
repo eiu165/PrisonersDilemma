@@ -6,19 +6,7 @@ using System.Linq;
 
 namespace Service
 {
-
-    public class BotService
-    {
-        private IBotFactory _playerFactory;
-        public BotService(IBotFactory playerFactory)
-        {
-            _playerFactory = playerFactory; 
-        }
-
-    }
-
-
-
+    
     public   class Generation
     { 
         private BotService _botService;
@@ -28,19 +16,16 @@ namespace Service
             _botService = botService;
 
         }
-        private IList<Domain.BotType> _players { get; set; }
 
         public void Run()
         {
-            _players =  _botService.GetPlayers();
-
-            var gameData = new List<GameData>();
-  
-            for (int i = 0; i <  _players.Count; i++)
+            var players =  _botService.GetPlayers(); 
+            var gameData = new List<GameData>(); 
+            for (int i = 0; i < players.Count; i++)
             {
-                for (int j = i + 1; j < _players.Count; j++)
+                for (int j = i + 1; j < players.Count; j++)
                 {
-                    var game = new Game( _players[i], _players[j] );
+                    var game = new Game(players[i], players[j] );
                     gameData.Add(game.Play()); 
                 }
             }

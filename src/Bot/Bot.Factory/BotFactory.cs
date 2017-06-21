@@ -7,21 +7,21 @@ namespace Bot.Factory
 
     public class BotFactory: IBotFactory
     {
-        public IPlayable GetPlayer(PlayerType type)
+        public IPlayable GetPlayer(BotType type)
         {
             switch (type)
             {
-                case PlayerType.Jesus:
+                case BotType.Jesus:
                     return new JesusNamespace.Jesus();
-                case PlayerType.Lucifer:
+                case BotType.Lucifer:
                     return new LuciferNamespace.Lucifer();
-                case PlayerType.MassiveRetaliation:
+                case BotType.MassiveRetaliation:
                     return new  MassiveRetaliationNamespace.MassiveRetaliation();
-                case PlayerType.TicForTac:
+                case BotType.TicForTac:
                     return new  TicForTacNamespace.TicForTac();
-                case PlayerType.RandomMan:
+                case BotType.RandomMan:
                     return new  RandomManNamespace.RandomMan();
-                case PlayerType.Tester:
+                case BotType.Tester:
                     return new  TesterNamespace.Tester();
                 default:
                     throw new NotSupportedException();

@@ -9,6 +9,6 @@ namespace Domain
 {
     public interface IBotFactory
     {
-        Domain.IPlayable GetPlayer(Domain.PlayerType type);
+        Domain.IPlayable GetPlayer(Domain.BotType type);
     }
 }
